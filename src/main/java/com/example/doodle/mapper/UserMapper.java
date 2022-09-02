@@ -8,6 +8,7 @@ import java.util.Map;
 
 @Mapper
 public interface UserMapper {
+    String getHelloById(String userid);
     void createUser(UserDTO userDTO);
     UserDTO getUserById(String userid);
 

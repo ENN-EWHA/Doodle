@@ -16,12 +16,11 @@ import axios from "axios";
 
 function App() {
     /*백엔드 연결*/
-    const [test, setTest] = useState("");
 
     useEffect(() => {
         axios
-            .get("/api/users/signup")
-            .then((response) => setTest(response.data))
+            .get("/users/root")
+            .then((response) => console.log(response.data))
             .catch((error) => console.log(error));
     }, []);
 
@@ -31,7 +30,7 @@ function App() {
         color: ["#ffdce0", "#f5f0ff", "#dcffe4", "#fff5b1"],
         nickname: "peach",
         email: "Timo22@google.com",
-        userId: "Timooo24",
+        userid: "Timooo24",
         userpw: "ennlab22",
         checkPW: "ennlab22",
     };
@@ -205,7 +204,7 @@ function App() {
     };
     return (
         <Router>
-            <div>백엔드에서 가져온 데이터입니다 : {test}</div>
+            
             <Routes>
                 <Route path="/" element={<Home />} exact />
                 <Route path="/signin" element={<SigninPage />} exact />

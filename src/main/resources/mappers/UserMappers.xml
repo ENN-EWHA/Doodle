@@ -4,6 +4,9 @@
 
 <mapper namespace="com.example.doodle.mapper.UserMapper">
 
+    <select id="getHelloById" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT username from users where userid = #{userid}
+    </select>
     <!-- 회원가입  -->
     <insert id="createUser">
         INSERT INTO users VALUES(#{username},#{nickname},#{email},#{userid},#{userpw})

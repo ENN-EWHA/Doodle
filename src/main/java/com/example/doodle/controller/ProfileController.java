@@ -30,4 +30,11 @@ public class ProfileController {
         userService.editUserProfile(userDTO);
 
     }
+
+    @GetMapping("/users/hello/{userid}")
+    public String hello(@PathVariable String userid){
+
+        return userService.getHello(userid);
+    }
+
 }

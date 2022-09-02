@@ -18,6 +18,7 @@ public class UserService {
     @Autowired
     UserMapper userMapper;
 
+
     public void createUser(UserDTO userDTO) {
         if(userMapper.getUserById(userDTO.getUserid())!=null){
             throw new ApiRequestException("이미 존재하는 ID입니다.");
@@ -127,6 +128,10 @@ public class UserService {
     public UserDTO getUserProfile(String userid) {
         UserDTO userProfile = userMapper.getProfileById(userid);
         return userProfile;
+    }
+    public String getHello(String userid){
+        String username = userMapper.getHelloById(userid);
+        return username;
     }
     //정보 수정
     public void editUserProfile(UserDTO userDTO) {

@@ -18,10 +18,10 @@ import java.util.List;
 public class DBConnectTestController {
     @Autowired
     private TestDAO testDAO;
-
-    @GetMapping("/hello")
-    public List<TestDTO> HelloWorld(){
-        return testDAO.getTestData();
-    }
+//
+//    @GetMapping("/hello")
+//    public List<TestDTO> HelloWorld(){
+//        return testDAO.getTestData();
+//    }
 
 }
