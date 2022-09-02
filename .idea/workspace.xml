@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="98612327-80e0-4a1b-87fa-e3ffbf02b97f" name="Changes" comment="pw">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/bootJarMainClassName" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/DoodleApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/MyBatisConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/MySQLConnectionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/controller/ClgController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/controller/DBConnectTestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/controller/FollowController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/controller/FriendController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/dao/TestDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/dto/AcheiveDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/dto/ClgAchieveDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/dto/ClgDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/dto/FollowDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/dto/FriendDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/dto/TestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/dto/UserDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/dto/UserSimpleDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/exception/ApiException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/exception/ApiExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/exception/ApiRequestException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/mapper/ClgMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/mapper/FollowMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/mapper/FriendMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/service/ClgService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/service/FollowService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/service/FriendService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/example/doodle/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/test/com/example/doodle/DoodleApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/libs/doodle-server-0.0.1-SNAPSHOT-plain.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/libs/doodle-server-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/reports/tests/test/classes/com.example.doodle.DoodleApplicationTests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/reports/tests/test/packages/com.example.doodle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/mappers/ClgMappers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/mappers/FriendMappers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/mappers/TestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/mappers/UserMappers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/templates/challenges.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/templates/delete_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/templates/findId.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/templates/find_id_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/templates/signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/test-results/test/TEST-com.example.doodle.DoodleApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/test-results/test/binary/output.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/DoodleApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/MyBatisConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/MySQLConnectionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/controller/ClgController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/controller/DBConnectTestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/controller/FollowController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/controller/FriendController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/controller/ProfileController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/dao/TestDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/dto/AcheiveDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/dto/ClgAchieveDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/dto/ClgDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/dto/FollowDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/dto/FriendDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/dto/SysLogDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/dto/TestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/dto/UserCheckDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/dto/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/dto/UserSimpleDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/exception/ApiException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/exception/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/exception/ApiRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/mapper/ClgMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/mapper/FollowMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/mapper/FriendMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/service/ClgService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/service/FriendService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/websocket/WebSocketConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/doodle/websocket/WebSocketHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/ROOM1.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/ClgMappers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/FriendMappers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/TestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/UserMappers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/roomList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/example/doodle/DoodleApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ECsMHN2669cpEsbcU3hKv5KSqM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98612327-80e0-4a1b-87fa-e3ffbf02b97f" name="Changes" comment="" />
+      <created>1662110850666</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662110850666</updated>
+      <workItem from="1662110852349" duration="772000" />
+    </task>
+    <task id="LOCAL-00001" summary="mkdir">
+      <created>1662110884219</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1662110884219</updated>
+    </task>
+    <task id="LOCAL-00002" summary="move directory">
+      <created>1662111034411</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662111034411</updated>
+    </task>
+    <task id="LOCAL-00003" summary="move directory">
+      <created>1662111088799</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662111088799</updated>
+    </task>
+    <task id="LOCAL-00004" summary="remove">
+      <created>1662111160475</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1662111160475</updated>
+    </task>
+    <task id="LOCAL-00005" summary="pw">
+      <created>1662111296998</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662111296998</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="mkdir" />
+    <MESSAGE value="move directory" />
+    <MESSAGE value="remove" />
+    <MESSAGE value="pw" />
+    <option name="LAST_COMMIT_MESSAGE" value="pw" />
+  </component>
+</project>
