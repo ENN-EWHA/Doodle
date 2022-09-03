@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.doodle.chat.ChatMappers">
+    <select id="getChatlog" resultType="com.example.doodle.chat.ChatLog">
+        select *
+        from chatLog
+        where roomid=#{clgid} order by regdate
+    </select>
+</mapper>

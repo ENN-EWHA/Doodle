@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="98612327-80e0-4a1b-87fa-e3ffbf02b97f" name="Changes" comment="pw">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/doodle/controller/ClgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/doodle/controller/ClgController.java" afterDir="false" />
@@ -11,6 +12,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/doodle/service/ClgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/doodle/service/ClgService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ClgMappers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ClgMappers.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="98612327-80e0-4a1b-87fa-e3ffbf02b97f" name="Changes" comment="move directory &amp; add frontend" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +37,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -44,6 +55,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -63,23 +75,29 @@
     ]
   }
 }</component>
+=======
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+>>>>>>> Stashed changes
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/backend" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DoodleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="doodle-server.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.doodle.DoodleApplication" />
@@ -96,11 +114,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662110850666</updated>
+<<<<<<< Updated upstream
       <workItem from="1662110852349" duration="772000" />
       <workItem from="1662112586759" duration="6841000" />
       <workItem from="1662133090644" duration="25000" />
       <workItem from="1662173682143" duration="2270000" />
       <workItem from="1662185981152" duration="1836000" />
+=======
+      <workItem from="1662110852349" duration="1441000" />
+      <workItem from="1662112304153" duration="6180000" />
+      <workItem from="1662120050011" duration="76000" />
+      <workItem from="1662126239775" duration="137000" />
+      <workItem from="1662184446100" duration="11826000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="mkdir">
       <created>1662110884219</created>
@@ -137,7 +163,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662111296998</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="move directory &amp; add frontend">
+      <created>1662111640816</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662111640816</updated>
+    </task>
+    <task id="LOCAL-00007" summary="move directory &amp; add frontend">
+      <created>1662111663263</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1662111663263</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +199,7 @@
     <MESSAGE value="move directory" />
     <MESSAGE value="remove" />
     <MESSAGE value="pw" />
-    <option name="LAST_COMMIT_MESSAGE" value="pw" />
+    <MESSAGE value="move directory &amp; add frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="move directory &amp; add frontend" />
   </component>
 </project>
