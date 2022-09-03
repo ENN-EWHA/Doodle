@@ -8,7 +8,7 @@ import java.sql.Date;
 @Getter
 @Setter
 public class ClgDTO {
-    private String clgid;
+    private int clgid;
     private String clgname;
     private String clgmanagerid;
     private String clginfo;
@@ -16,4 +16,6 @@ public class ClgDTO {
     private String clgCateId;
     private Date made_date;
     private Date end_date;
+    private Boolean isValid;
+
 }

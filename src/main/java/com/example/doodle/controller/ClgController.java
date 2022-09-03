@@ -38,19 +38,19 @@ public class ClgController {
 
     //챌린지 삭제
     @DeleteMapping("/challenges/{clgid}")
-    public void deleteChallenge(@PathVariable String clgid){
+    public void deleteChallenge(@PathVariable int clgid){
         clgService.deleteClg(clgid);
     }
 
     //챌린지 수정
     @PutMapping("challenges/{clgid}")
-    public void modifyChallenge(@PathVariable String clgid, @RequestBody ClgDTO clgDTO){
+    public void modifyChallenge(@PathVariable int clgid, @RequestBody ClgDTO clgDTO){
         clgService.modifyChallenge(clgDTO);
     }
 
     //챌린지 상세내용 조회
     @GetMapping("/challenges/{clgid}")
-    public ClgDTO getChallengeInfo(@PathVariable String clgid){
+    public ClgDTO getChallengeInfo(@PathVariable int clgid){
         return clgService.getChallengeInfo(clgid);
 
     }
@@ -58,12 +58,14 @@ public class ClgController {
     //오늘의 챌린지 조회
     @GetMapping("/challenges/today/{userid}")
     public List<ClgDTO> getTodayChallenges(@PathVariable String userid){
-        if(clgService.getClgnameById(userid).length()==0){
-            throw new ApiRequestException("존재하지 않는 아이디입니다.");
-        }
+//        if(clgService.getClgnameById(userid)==null){
+//            throw new ApiRequestException("존재하지 않는 아이디입니다.");
+//        }
+
         LocalDate localDate = LocalDate.now();
         Date date = java.sql.Date.valueOf(String.valueOf(localDate));
         List<ClgDTO> clgAll = clgService.getClgAll(userid);
+        if(clgAll.stream().)
         return clgService.getDailyChallenges(clgAll,date);
 
     }
@@ -79,27 +81,27 @@ public class ClgController {
 
     //챌린지 참여
     @PostMapping("/challenges/{clgid}/member/{userid}")
-    public String joinChallenge(@PathVariable String userid, @PathVariable String clgid){
+    public String joinChallenge(@PathVariable String userid, @PathVariable int clgid){
         clgService.joinChallenge(userid, clgid);
         return "멤버 추가";
     }
 
     //챌린지 탈퇴
     @DeleteMapping("challenges/{clgid}/member/{userid}")
-    public String quitChallenge(@PathVariable String userid,@PathVariable String clgid){
+    public String quitChallenge(@PathVariable String userid,@PathVariable int clgid){
         clgService.quitChallenge(userid, clgid);
         return "멤버 삭제";
     }
 
     //챌린지 참여 인원 조회
     @GetMapping("challenges/{clgid}/member")
-    public List<UserDTO> getClgMembers(@PathVariable String clgid){
+    public List<UserDTO> getClgMembers(@PathVariable int clgid){
         return clgService.getClgMembers(clgid);
     }
 
 //    챌린지별 참여도 순위 조회
     @GetMapping("/challenges/{clgid}/participation")
-    public List<AcheiveDTO> getParticipationRank(@PathVariable String clgid){
+    public List<AcheiveDTO> getParticipationRank(@PathVariable int clgid){
         return clgService.getParticipationRank(clgid);
 
     }
@@ -112,13 +114,13 @@ public class ClgController {
 
     //일별 유저별 달성여부 조회
     @GetMapping("/challenges/{clgid}/record")
-    public List<ClgAchieveDTO> getClgAchieve(@PathVariable String clgid){
+    public List<ClgAchieveDTO> getClgAchieve(@PathVariable int clgid){
         return clgService.getClgAchieve(clgid);
     }
 
     //챌린지 색상 변경
     @PatchMapping("/challenges/{clgid}/color")
-    public void changeClgColor(@PathVariable String clgid,  @RequestParam String userid, @RequestParam String color){
+    public void changeClgColor(@PathVariable int clgid,  @RequestParam String userid, @RequestParam String color){
         clgService.changeClgColor(clgid, userid, color);
     }
 

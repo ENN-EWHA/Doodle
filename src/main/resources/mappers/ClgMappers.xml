@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.doodle.mapper.ClgMapper">
     <insert id="createClg">
-        insert into challenges(clgid,clgname,clgmanagerid,clginfo,clgmemberno,clgCateId,end_date) values(#{clgid},#{clgname},#{clgmanagerid},#{clginfo},#{clgmemberno},#{clgCateId},#{end_date})
+        insert into challenges(clgname,clgmanagerid,clginfo,clgmemberno,clgCateId,end_date) values(#{clgname},#{clgmanagerid},#{clginfo},#{clgmemberno},#{clgCateId},#{end_date})
     </insert>
     <insert id="includeMember">
         insert into clg_members(userid, clgid) values (#{userid},#{clgid})
@@ -60,9 +60,11 @@
         set color=#{color}
         where clgid=#{clgid} and userid=#{userid}
     </update>
-    <delete id="deleteClg">
-        delete from challenges where clgid=#{cldid}
-    </delete>
+    <update id="unvalidateClg">
+        update challenges
+        set isValid=0
+        where clgid=#{clgid}
+    </update>
     <delete id="deleteMemberInClg">
         delete from clg_members where clgid=#{clgid}
     </delete>

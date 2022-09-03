@@ -8,6 +8,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class UserSimpleDTO {
+    private String userid;
     private String nickname;
     private Date start_date;
 

@@ -12,7 +12,7 @@ public class FriendDTO {
 
     private String relatedUserID;
 
-    private int relationType;
+    private boolean relationType;
 
     private Date acceptDate;
 

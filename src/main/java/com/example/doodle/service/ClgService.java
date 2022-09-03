@@ -1,7 +1,9 @@
 package com.example.doodle.service;
 
-import ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy;
-import com.example.doodle.dto.*;
+import com.example.doodle.dto.AcheiveDTO;
+import com.example.doodle.dto.ClgAchieveDTO;
+import com.example.doodle.dto.ClgDTO;
+import com.example.doodle.dto.UserDTO;
 import com.example.doodle.exception.ApiRequestException;
 import com.example.doodle.mapper.ClgMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
 import java.util.stream.Collectors;
 
 
@@ -20,26 +24,23 @@ public class ClgService {
     ClgMapper clgMapper;
 
     public void createClg(ClgDTO clgDTO){
-        if(clgMapper.getClgById(clgDTO.getClgid())!=null){
-            throw new ApiRequestException("이미 존재하는 챌린지 아이디입니다.");
-        }
         clgMapper.createClg(clgDTO);
         String manager = clgDTO.getClgmanagerid();
-        String challenge = clgDTO.getClgid();
+        int challenge = clgDTO.getClgid();
         clgMapper.includeMember(manager,challenge);
     }
 
-    public void deleteClg(String clgid){
-        clgMapper.deleteClg(clgid);
+    public void deleteClg(int clgid){
+        clgMapper.unvalidateClg(clgid);
         clgMapper.deleteMemberInClg(clgid);
     }
 
-    public String getClgnameById(String clgid){
+    public String getClgnameById(int clgid){
         ClgDTO clgDTO = clgMapper.getClgById(clgid);
         return  clgDTO.getClgname();
     }
 
-    public ClgDTO getChallengeInfo(String clgid){
+    public ClgDTO getChallengeInfo(int clgid){
         ClgDTO clgDTO = clgMapper.getClgById(clgid);
         log.info(String.valueOf(clgDTO));
         return clgDTO;
@@ -66,33 +67,37 @@ public class ClgService {
         return dailyClgs;
     }
 
-    public void joinChallenge(String userid, String clgid){
-        if(clgMapper.findMemberById(userid, clgid)!=null){
+    public void joinChallenge(String userid, int clgid) {
+        if (clgMapper.findMemberById(userid, clgid) != null) {
             throw new ApiRequestException("이미 가입한 챌린지입니다.");
         }
-        clgMapper.includeMember(userid, clgid);
 
+        //valid==0이면 챌린지 참여 불가
+        if (clgMapper.getClgById(clgid).getIsValid()) {
+            clgMapper.includeMember(userid, clgid);
+
+        }
     }
 
-    public void quitChallenge(String userid, String clgid){
-        if(ObjectUtils.isEmpty(clgMapper.getClgById(userid))){
+    public void quitChallenge(String userid, int clgid){
+        if(clgMapper.findMemberById(userid, clgid) != null){
             throw new ApiRequestException("가입하지 않은 챌린지입니다.");
         }
 
         //챌린지 탈퇴하려는 사람이 매니저인 경우 챌린지 자체를 삭제하고 챌린지 멤버들도 탈퇴처리
         if(clgMapper.getManagerId(clgid).equals(userid)){
-            clgMapper.deleteClg(clgid);
+            clgMapper.unvalidateClg(clgid);
             clgMapper.deleteMemberInClg(clgid);
         }
         clgMapper.removeMember(userid, clgid);
 
     }
 
-    public List<UserDTO> getClgMembers(String clgid){
+    public List<UserDTO> getClgMembers(int clgid){
         return clgMapper.getClgMembers(clgid);
     }
 
-    public List<AcheiveDTO> getParticipationRank(String clgid){
+    public List<AcheiveDTO> getParticipationRank(int clgid){
         List<AcheiveDTO> participateList = clgMapper.getAchieveRate(clgid);
         quickSort(participateList, 0, participateList.size()-1);
         Collections.reverse(participateList);
@@ -105,14 +110,14 @@ public class ClgService {
         return clgMapper.getClgByCateId(clgCateId);
     }
 
-    public List<ClgAchieveDTO> getClgAchieve(String clgid){
+    public List<ClgAchieveDTO> getClgAchieve(int clgid){
         if(ObjectUtils.isEmpty(clgMapper.getClgById(clgid))){
             throw new ApiRequestException("존재하지 않는 챌린지 아이디입니다");
         }
         return clgMapper.getClgAchieve(clgid);
     }
 
-    public void changeClgColor(String clgid, String userid, String color){
+    public void changeClgColor(int clgid, String userid, String color){
         clgMapper.changeClgColor(clgid, userid, color);
     }
 

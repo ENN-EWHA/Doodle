@@ -9,32 +9,32 @@ import java.util.*;
 public interface ClgMapper {
     void createClg(ClgDTO clgDTO);
 
-    void includeMember(String userid, String clgid);
+    void includeMember(String userid, int clgid);
 
-    void deleteClg(String clgid);
+    void unvalidateClg(int clgid);
 
-    void deleteMemberInClg(String clgid);
+    void deleteMemberInClg(int clgid);
 
     void modifyClg(ClgDTO clgDTO);
 
-    ClgDTO getClgById(String clgid);
+    ClgDTO getClgById(int clgid);
 
-    String getManagerId(String clgid);
-    String findMemberById(String userid, String clgid);
+    String getManagerId(int clgid);
+    String findMemberById(String userid, int clgid);
 
     List<ClgDTO> findAll(String userid);
 
-    void removeMember(String userid, String clgid);
+    void removeMember(String userid, int clgid);
 
-    List<UserDTO> getClgMembers(String clgid);
+    List<UserDTO> getClgMembers(int clgid);
 
-    List<AcheiveDTO> getAchieveRate(String cldid);
+    List<AcheiveDTO> getAchieveRate(int clgid);
 
     List<ClgDTO> getClgByCateId(String clgCateId);
 
-    List<ClgAchieveDTO> getClgAchieve(String clgid);
+    List<ClgAchieveDTO> getClgAchieve(int clgid);
 
-    void changeClgColor(String clgid, String userid, String color);
+    void changeClgColor(int clgid, String userid, String color);
 
 
 }
