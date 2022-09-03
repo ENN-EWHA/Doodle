@@ -7,9 +7,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.example.doodle.controller", "com.example.doodle.mapper","com.example.doodle.service","com.example.doodle.dto","com.example.doodle.websocket"})
+@ComponentScan(basePackages = {"com.example.doodle.controller", "com.example.doodle.mapper","com.example.doodle.service","com.example.doodle.dto", "com.example.doodle.chat"})
 @EnableJpaRepositories
-@MapperScan(basePackages = {"com.example.doodle.dao","com.example.doodle.mapper"})
+@MapperScan(basePackages = {"com.example.doodle.dao","com.example.doodle.mapper","com.example.doodle.chat"})
 public class DoodleApplication {
 
 	public static void main(String[] args) {
