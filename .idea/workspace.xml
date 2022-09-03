@@ -5,6 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98612327-80e0-4a1b-87fa-e3ffbf02b97f" name="Changes" comment="pw">
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a91ab832-62d1-4f99-ad67-82ae2e1ee8ed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a91ab832-62d1-4f99-ad67-82ae2e1ee8ed/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a91ab832-62d1-4f99-ad67-82ae2e1ee8ed/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/doodle/controller/ClgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/doodle/controller/ClgController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/doodle/dto/ClgDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/doodle/dto/ClgDTO.java" afterDir="false" />
@@ -58,7 +79,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "f64ef356955e3430dca5fa8fc05537bf"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -101,6 +123,8 @@
       <updated>1662110850666</updated>
       <workItem from="1662110852349" duration="772000" />
       <workItem from="1662112586759" duration="6841000" />
+      <workItem from="1662133090644" duration="25000" />
+      <workItem from="1662173682143" duration="1908000" />
     </task>
     <task id="LOCAL-00001" summary="mkdir">
       <created>1662110884219</created>

@@ -1,20 +1,20 @@
 package com.example.doodle.controller;
 
-import com.example.doodle.dto.*;
+import com.example.doodle.dto.AcheiveDTO;
+import com.example.doodle.dto.ClgAchieveDTO;
+import com.example.doodle.dto.ClgDTO;
+import com.example.doodle.dto.UserDTO;
 import com.example.doodle.exception.ApiRequestException;
 import com.example.doodle.service.ClgService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
@@ -58,14 +58,13 @@ public class ClgController {
     //오늘의 챌린지 조회
     @GetMapping("/challenges/today/{userid}")
     public List<ClgDTO> getTodayChallenges(@PathVariable String userid){
-//        if(clgService.getClgnameById(userid)==null){
-//            throw new ApiRequestException("존재하지 않는 아이디입니다.");
-//        }
+        if(clgService.checkUserExist(userid)==0){
+            throw new ApiRequestException("존재하지 않는 아이디입니다.");
+        }
 
         LocalDate localDate = LocalDate.now();
         Date date = java.sql.Date.valueOf(String.valueOf(localDate));
         List<ClgDTO> clgAll = clgService.getClgAll(userid);
-        if(clgAll.stream().)
         return clgService.getDailyChallenges(clgAll,date);
 
     }

@@ -17,7 +17,7 @@ public interface ClgMapper {
 
     void modifyClg(ClgDTO clgDTO);
 
-    ClgDTO getClgById(int clgid);
+    ClgDTO getClgById(int userid);
 
     String getManagerId(int clgid);
     String findMemberById(String userid, int clgid);

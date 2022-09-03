@@ -6,6 +6,7 @@ import com.example.doodle.dto.ClgDTO;
 import com.example.doodle.dto.UserDTO;
 import com.example.doodle.exception.ApiRequestException;
 import com.example.doodle.mapper.ClgMapper;
+import com.example.doodle.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,8 @@ import java.util.stream.Collectors;
 public class ClgService {
     @Autowired
     ClgMapper clgMapper;
+    @Autowired
+    UserMapper userMapper;
 
     public void createClg(ClgDTO clgDTO){
         clgMapper.createClg(clgDTO);
@@ -35,9 +38,15 @@ public class ClgService {
         clgMapper.deleteMemberInClg(clgid);
     }
 
-    public String getClgnameById(int clgid){
-        ClgDTO clgDTO = clgMapper.getClgById(clgid);
-        return  clgDTO.getClgname();
+    public int checkUserExist(String userid){
+        UserDTO userDTO = userMapper.getUserById(userid);
+        if(ObjectUtils.isEmpty(userDTO)){
+            return 0;
+        }
+        else{
+            return 1;
+        }
+
     }
 
     public ClgDTO getChallengeInfo(int clgid){
@@ -48,7 +57,7 @@ public class ClgService {
 
     public void modifyChallenge(ClgDTO clgDTO){
         //매니저를 변경할 경우
-        if(clgDTO.getClgmanagerid() != clgMapper.getClgById(clgDTO.getClgid()).getClgmanagerid()){
+        if(clgDTO.getClgmanagerid().equals(clgMapper.getClgById(clgDTO.getClgid()).getClgmanagerid())){
             if(clgMapper.findMemberById(clgDTO.getClgmanagerid(), clgDTO.getClgid())==null){
                 throw new ApiRequestException("멤버가 아닌 회원은 매니저가 될 수 없습니다.");
             }
