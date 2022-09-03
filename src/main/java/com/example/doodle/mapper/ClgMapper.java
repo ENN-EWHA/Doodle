@@ -13,7 +13,7 @@ public interface ClgMapper {
 
     void unvalidateClg(int clgid);
 
-    void deleteMemberInClg(int clgid);
+    void deleteClgMembers(int clgid);
 
     void modifyClg(ClgDTO clgDTO);
 
