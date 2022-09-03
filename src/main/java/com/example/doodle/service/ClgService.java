@@ -33,9 +33,12 @@ public class ClgService {
         clgMapper.includeMember(manager,challenge);
     }
 
-    public void deleteClg(int clgid){
+    public void unvalidateClg(int clgid){
         clgMapper.unvalidateClg(clgid);
-        clgMapper.deleteMemberInClg(clgid);
+    }
+
+    public void deleteClgMembers(int clgid){
+        clgMapper.deleteClgMembers(clgid);
     }
 
     public int checkUserExist(String userid){
@@ -96,7 +99,7 @@ public class ClgService {
         //챌린지 탈퇴하려는 사람이 매니저인 경우 챌린지 자체를 삭제하고 챌린지 멤버들도 탈퇴처리
         if(clgMapper.getManagerId(clgid).equals(userid)){
             clgMapper.unvalidateClg(clgid);
-            clgMapper.deleteMemberInClg(clgid);
+            clgMapper.deleteClgMembers(clgid);
         }
         clgMapper.removeMember(userid, clgid);
 

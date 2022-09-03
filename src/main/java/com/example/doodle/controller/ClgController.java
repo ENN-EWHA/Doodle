@@ -36,10 +36,16 @@ public class ClgController {
 
     }
 
-    //챌린지 삭제
-    @DeleteMapping("/challenges/{clgid}")
-    public void deleteChallenge(@PathVariable int clgid){
-        clgService.deleteClg(clgid);
+    //챌린지 무효화(1->0)
+    @PutMapping("/challenges/{clgid}/management")
+    public void unvalidateClg(@PathVariable int clgid){
+        clgService.unvalidateClg(clgid);
+    }
+
+    //챌린지에 속한 멤버 삭제
+    @DeleteMapping("/challenges/{clgid}/management")
+    public void deleteClgMembers(@PathVariable int clgid){
+        clgService.deleteClgMembers(clgid);
     }
 
     //챌린지 수정
