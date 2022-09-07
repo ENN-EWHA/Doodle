@@ -74,9 +74,10 @@ public class ClgService {
         return clgMapper.findAll(userid);
     }
 
-    public List<ClgDTO> getDailyChallenges(List<ClgDTO> clgAll, Date date){
-        List<ClgDTO> dailyClgs = clgAll.stream().filter(e->e.getEnd_date().after(date)).collect(Collectors.toList());
-        return dailyClgs;
+  public List<ClgDTO> getDailyChallenges(List<ClgDTO> clgAll, Date date){
+
+        return clgAll.stream().filter(e->e.getEnd_date().after(date) && e.getMade_date().before(date)).collect(Collectors.toList());
+
     }
 
     public void joinChallenge(String userid, int clgid) {
