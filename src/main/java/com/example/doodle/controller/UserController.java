@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 
-@Controller
+@RestController
 @Slf4j
 @RequiredArgsConstructor
 public class UserController {
@@ -40,16 +40,16 @@ public class UserController {
 //    }
 
     @RequestMapping(value = "/users/signup", method = RequestMethod.POST)
-    public String postsignup(@ModelAttribute UserDTO userDTO){
+    public void postsignup(@RequestBody UserDTO userDTO){
         userService.createUser(userDTO);
         log.info(userDTO.getUsername(), userDTO.getUserpw());
-        return "signup";
+
     }
 
 
 
     @GetMapping("/users/login")
-    public String getlogin(HttpServletRequest request){
+    public void getlogin(HttpServletRequest request){
         HttpSession session = request.getSession();
         String userid = (String) session.getAttribute("userid");
 
@@ -57,9 +57,7 @@ public class UserController {
         if(userid==null){
             throw new ApiRequestException("이미 로그인 된 상태입니다.");
         }
-        else{
-            return "redirect:/home";
-        }
+
 
     }
 
@@ -67,6 +65,7 @@ public class UserController {
     public void postlogin(@RequestParam String userid, @RequestParam String userpw_test, HttpServletRequest request){
 
         int isPassed = userService.loginCheck(userid, userpw_test);
+        log.info(String.valueOf(isPassed));
 
         if(isPassed==1) {//아이디와 비번 일치하는 경우
             HttpSession session = request.getSession();
@@ -82,19 +81,19 @@ public class UserController {
     }
 
     @GetMapping("/users/logout")
-    public String logout(HttpSession session){
+    public void logout(HttpSession session){
         userService.logout(session);
         log.info("로그아웃 성공");
-        return "redirect:/home";
+
     }
 
 
 
     //아이디 찾기
     @RequestMapping(value = "/findId", method = RequestMethod.POST)
-    public String findId(HttpServletResponse response, @RequestParam("email") String email, Model md) throws Exception{
+    public void findId(HttpServletResponse response, @RequestParam("email") String email, Model md) throws Exception{
         md.addAttribute("id", userService.findId(response, email));
-        return "redirect:/findId";
+
     }
 
     /*@RequestMapping(value="/findPw" , method=RequestMethod.GET)
@@ -123,7 +122,7 @@ public class UserController {
         if(userService.deleteUser(userCheckDTO.getUserid(),userCheckDTO.getUserpw_test(), response)) {
             session.invalidate();
         }
-//        return "redirect:/home";
+
     }
 
 
