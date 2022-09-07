@@ -65,7 +65,7 @@
         set isValid=0
         where clgid=#{clgid}
     </update>
-    <delete id="deleteMemberInClg">
+    <delete id="deleteClgMembers">
         delete from clg_members where clgid=#{clgid}
     </delete>
     <delete id="removeMember">
