@@ -54,7 +54,7 @@ public class UserController {
         String userid = (String) session.getAttribute("userid");
 
 //        이미 로그인 된 상태면 home으로 redirect
-        if(userid==null){
+        if(userid!=null){
             throw new ApiRequestException("이미 로그인 된 상태입니다.");
         }
 
@@ -62,7 +62,7 @@ public class UserController {
     }
 
     @PostMapping("/users/login")
-    public void postlogin(@RequestParam String userid, @RequestParam String userpw_test, HttpServletRequest request){
+    public void postlogin(@RequestParam("userid") String userid, @RequestParam("userpw") String userpw_test, HttpServletRequest request){
 
         int isPassed = userService.loginCheck(userid, userpw_test);
         log.info(String.valueOf(isPassed));
