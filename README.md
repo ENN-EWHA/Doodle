@@ -18,3 +18,8 @@ docker-compose 파일 실행
 $ docker-compose down
 ```
 docker-compose 종료
+
+```
+$ npm start
+```
+react 실행
