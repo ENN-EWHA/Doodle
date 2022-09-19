@@ -3,7 +3,7 @@ import { Link as LinkT } from "react-router-dom";
 
 export const Container = styled.div`
   min-height: 700px;
-  position: flex;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;

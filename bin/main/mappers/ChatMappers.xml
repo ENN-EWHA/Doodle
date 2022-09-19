@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.doodle.mapper.ChatMapper">
+    <select id="getChatlog" resultType="com.example.doodle.dto.ChatDTO">
+        select *
+        from chatLog
+        where clgid=#{clgid} order by regdate
+    </select>
+    <insert id="insertChatLog" parameterType="com.example.doodle.dto.ChatDTO">
+        insert into chatLog(userid, message, clgid) values (#{userid}, #{message}, #{clgid})
+    </insert>
+</mapper>

@@ -1,9 +1,44 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import styled from "styled-components";
 import Navbar from "../Navbar";
 import { Tab } from "./Tab";
 import Footer from "../Footer";
+import axios from "axios";
 const MyPage = () => {
+    const [username,setUsername]=useState('');
+    const [email,setEmail]=useState('');
+    const [nickname,setNickname]=useState('');
+    const [userid,setUserId]=useState('');
+    const [userpw,setPassword]=useState('');
+    
+ 
+    axios
+        .get("/users/junidai/")
+        .then((response) => {
+          setUsername(response.data.username)
+          setEmail(response.data.email)
+          setNickname(response.data.nickname)
+          setPassword(response.data.userpw)
+          setUserId(response.data.userid)
+        })
+        .catch((error) => console.log(error));
+
+    // useEffect(()=>{
+    //   try{
+    //     const res = axios.get("/users/junidai")
+    //     console.log(res)
+    //     setUsername(res.data.username)
+    //     setEmail(res.data[0].email)
+    //     setNickname(res.data[0].nickname)
+    //     setUserId(res.data[0].userid)
+    //     setPassword(res.data[0].userpw)
+    //     console.log("연결")
+
+    //   }catch(e){
+    //     console.log(e.message)
+    //   }},[username,email,nickname,userid,userpw])
+
+      
   return (
     <>
       <Navbar />
@@ -13,34 +48,30 @@ const MyPage = () => {
           <PageContainerWrap>
             <h1>내 정보</h1>
 
-            <ContentContainer id="form">
-              <Label>
+            <ContentContainer>
+              <Label for='username'>
                 내 이름:
-                <TextInput id="name" type="name" placeholder="이름불러오기" />
+                <TextInput id="username" className='inputTitle' name="username" type = "text" value={username}/>
+              </Label>
+              <Label>
+                닉네임:
+                <TextInput id="nickname" type="text" value={nickname}/>
               </Label>
               <Label>
                 이메일:
                 <TextInput
                   id="email"
                   type="email"
-                  placeholder="이메일불러오기"
+                  value={email}
                 />
               </Label>
               <Label>
-                공개범위:
-                <TextInput
-                  id="email"
-                  type="email"
-                  placeholder="공개범위불러오기"
-                />
+                아이디:
+                <TextInput id="userid" type="text" value={userid} />
               </Label>
               <Label>
-                친구코드:
-                <TextInput
-                  id="email"
-                  type="email"
-                  placeholder="친구코드불러오기"
-                />
+                비밀번호:
+                <TextInput id="userpw" type="text" value={userpw} />
               </Label>
             </ContentContainer>
           </PageContainerWrap>
@@ -107,6 +138,7 @@ const Label = styled.label`
 const TextInput = styled.input`
   display: block;
   width: 175px;
+  height:35px;
   border: 1px solid black;
   border-bottom-width: 2px;
   padding: 6px 8px;

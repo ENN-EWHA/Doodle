@@ -3,7 +3,7 @@ import { Link as LinkR } from "react-router-dom";
 
 export const Container = styled.div`
   min-height: 700px;
-  position: fixed;
+  // position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   background: white;
 `;
 export const FormWrap = styled.div`
-  height: 100%;
+  height:1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,38 +48,40 @@ export const FormContent = styled.div`
 `;
 
 export const Form = styled.form`
-  background: lightgray;
-  max-width: 600px;
-  height: auto;
-  width: 100%;
-  z-index: 1;
-  display: grid;
-  margin: 0 auto;
-  padding: 80px 32px;
-  border-radius: 4px;
+background: lightgray;
+max-width: 600px;
+height: 1000px;
+width: 100%;
+z-index: 1;
+display: grid;
+margin: 0 auto;
+padding: 80px 32px;
+border-radius: 4px;
 
-  @media screen and (max-width: 400px) {
-    padding: 32px 32px;
-  }
+@media screen and (max-width: 400px) {
+  padding: 32px 32px;
+}
 `;
 
 export const FormH1 = styled.h1`
   margin-bottom: 40px;
   color: black;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 400;
   text-align: center;
 `;
 
+
 export const FormLabel = styled.label`
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: black;
+margin-bottom: 8px;
+font-size: 14px;
+color: black;
 `;
 
 export const FormInput = styled.input`
   padding: 16px 16px;
   margin-bottom: 32px;
+  height:50px;
   border: none;
   border-radius: 4px;
 `;
@@ -101,3 +103,19 @@ export const Text = styled.a`
   font-size: 14px;
 `;
 
+export const Error=styled.div`
+color: red;
+margin:8px 0 16px;
+font-weight=bold;
+`;
+export const Success= styled.div`
+color:blue;
+font-weight:bold;
+`;
+export const LinkContainer = styled.p`
+font-size:13px;
+color: black;
+margin: 0 auto 8px;
+width:400px;
+max-width:400px;
+ `

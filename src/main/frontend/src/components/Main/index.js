@@ -29,7 +29,7 @@ const MainPage = () => {
         <MainP>매일매일</MainP>
         <MainBtnWrapper>
           <Button
-            to="/signup"
+            to="/SignUp"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"

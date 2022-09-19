@@ -20,7 +20,7 @@ const FindIdPw = () => {
               <FormInput type="email" required />
               <FormButton type="submit">아이디찾기</FormButton>
               <Text href="/forgotpassword">비밀번호 찾기</Text>
-              <Text href="/signup">아직 회원이 아니신가요?</Text>
+              <Text href="/SignUp">아직 회원이 아니신가요?</Text>
             </Form>
           </FormContent>
         </FormWrap>
@@ -30,6 +30,7 @@ const FindIdPw = () => {
 };
 
 export default FindIdPw;
+
 
 
 const Container = styled.div`
@@ -56,7 +57,7 @@ const FormWrap = styled.div`
 const Icon = styled(LinkT)`
   margin-left: 32ps;
   margin-top: 32px;
-  text-decoration: none;git 
+  text-decoration: none;
   color: #fff;
   font-weight: 700;
   font-size: 32px;
@@ -79,9 +80,9 @@ const FormContent = styled.div`
 `;
 
 const Form = styled.form`
-  background: lightblue;
-  max-width: 800px;
-  height: auto;
+  background: lightgray;
+  max-width: 600px;
+  height: 1000px;
   width: 100%;
   z-index: 1;
   display: grid;
@@ -96,7 +97,7 @@ const Form = styled.form`
 
 const FormH1 = styled.h1`
   margin-bottom: 40px;
-  color: #fff;
+  color: black;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
@@ -105,24 +106,29 @@ const FormH1 = styled.h1`
 const FormLabel = styled.label`
   margin-bottom: 8px;
   font-size: 14px;
-  color: #fff;
+  color: black;
 `;
 
 const FormInput = styled.input`
   padding: 16px 16px;
   margin-bottom: 32px;
+  height: 50px;
   border: none;
   border-radius: 4px;
 `;
 
 const FormButton = styled.button`
-  background: lightpink;
+  background: gray;
   padding: 16px 0;
   border: none;
   border-radius: 4px;
   color: #fff;
   font-size: 20px;
   cursor: pointer;
+
+  @disabled {
+    background-color: red;
+  }
 `;
 
 const Text = styled.a`
@@ -131,4 +137,3 @@ const Text = styled.a`
   color: #fff;
   font-size: 14px;
 `;
-

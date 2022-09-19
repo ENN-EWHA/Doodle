@@ -3,7 +3,9 @@ import {useState,useEffect} from 'react'
 const useData =(validate)=>{
     const [values, setValues] = useState({
         username:'',
+        nickname:'',
         email:'',
+        userid:'',
         password:'',
         password2:''
     })

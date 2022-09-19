@@ -17,12 +17,52 @@ import axios from "axios";
 function App() {
     /*백엔드 연결*/
 
+    // useEffect(() => {
+    //     axios
+    //         .get("/challenges/1")
+    //         .then((response) => console.log(response.data))
+    //         .catch((error) => console.log(error));
+    // }, []);
+
+    // useEffect(() => {
+    //     axios
+    //         .get("/users/ha/")
+    //         .then((response) => console.log(response.data))
+    //         .catch((error) => console.log(error));
+    // }, []);
+
+    // axios
+    // .post("/users/signup",{
+    //     username:"dahee",
+    //     userid:"dahi",
+    //     userpw:"123",
+    //     email:"cu@naver.com",
+    //     nickname:"123"})
+    // .then((response)=>console.log(response))
+    // .catch((error) => console.log(error+"와안대"));
+
+        
     useEffect(() => {
         axios
-            .get("/users/root")
+        .post("/challenges",{
+            clgid: "12",
+            clgname: "운동1",
+            clgmanagerid: "junidai",
+            clginfo: "강의 2개씩 듣고 인증",
+            clgmemberno: 10,
+            clgCateId: "운동",
+            made_date: "2022-08-20",
+            end_date: "2024-11-11",
+        })
             .then((response) => console.log(response.data))
             .catch((error) => console.log(error));
     }, []);
+
+
+
+
+
+    
 
     /*data*/
     const userData = {
