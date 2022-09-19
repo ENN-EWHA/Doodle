@@ -17,31 +17,14 @@ import axios from "axios";
 function App() {
     /*백엔드 연결*/
 
-    // useEffect(() => {
-    //     axios
-    //         .get("/challenges/1")
-    //         .then((response) => console.log(response.data))
-    //         .catch((error) => console.log(error));
-    // }, []);
+    useEffect(() => {
+        axios
+            .get("/user")
+            .then((response) => console.log(response.data))
+            .catch((error) => console.log(error));
+    }, []);
 
-    // useEffect(() => {
-    //     axios
-    //         .get("/users/ha/")
-    //         .then((response) => console.log(response.data))
-    //         .catch((error) => console.log(error));
-    // }, []);
-
-    // axios
-    // .post("/users/signup",{
-    //     username:"dahee",
-    //     userid:"dahi",
-    //     userpw:"123",
-    //     email:"cu@naver.com",
-    //     nickname:"123"})
-    // .then((response)=>console.log(response))
-    // .catch((error) => console.log(error+"와안대"));
-
-        
+  
     useEffect(() => {
         axios
         .post("/challenges",{
